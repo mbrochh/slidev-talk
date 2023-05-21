@@ -287,8 +287,20 @@ print(9)
 
 # Publishing The Slides
 
+- change `build` command in `package.json` 
+
+```json
+"build": "slidev build --base /REPO-NAME",
+```
+
 - run `npm run build`, this will create a `dist/` folder
 - run `mv dist ../docs`, this will move the slides to the `docs/` folder at the project root
+- `git add .` - add all files to git
+- `git commit` - write your commit message
+- `git push` - push to GitHub
+- browse to `https://github.com/YOURNAME/YOUR-REPO/settings/pages`
+- select `master` branch and `/docs` folder and click `Save`
+- borwse to `https://YOURNAME.github.io/YOUR-REPO/`
 
 ---
 layout: end
