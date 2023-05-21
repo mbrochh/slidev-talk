@@ -40,9 +40,11 @@ src: ./pages/about-pugs.md
 - Create a git repo
 - Create `README.md`
 - Create `initial commit`
-- `git remote add origin git@github.com:mbrochh/slidev-talk.git`
+- `git remote add origin git@github.com:YOURNAME/YOUR-REPO.git`
 - `git push -u origin master`
 - `npm init slidev`
+- `cd slidev`
+- `npm run dev`
 
 ---
 
@@ -115,52 +117,8 @@ src: ./pages/about-pugs.md
 - Note the empty lines around the `---`
 
 ---
-layout: two-cols
+src: ./pages/layouts-and-styles.md
 ---
-
-<style>
-  .col-left {
-    padding-right: 1em;
-  }
-</style>
-
-# Layouts & Styles
-
-```md
----
-layouts: two-cols
----
-
-<style>
-  .col-left {
-    padding-right: 1em;
-  }
-</style>
-
-# Slide Headline 
-
-- some content here
-
-::right::
-
-<h1>&nbsp;</h1>
-
-- some content here
-
-```
-
-::right::
-
-<h1>&nbsp;</h1>
-
-<v-clicks>
-
-- the `<style>` blog adds some padding to the left column
-- use the inspect tool to find the class names when writing custom styles
-- the `::right::` block marks the end of the left column
-- the `<h1>` tag is a hack to make the right column content start at the same height as the left column content
-
-</v-clicks>
 
 ---
 
@@ -178,7 +136,9 @@ layouts: two-cols
 
 ```
 
-## Example:
+<br />
+
+### Example:
 
 <v-clicks>
 
@@ -205,7 +165,9 @@ clicks: 3
 <div v-click="2">Element 2</div>
 ```
 
-- Example:
+<br />
+
+### Example:
 
 <div v-click="1">Element 1</div>
 <div v-click="3">Element 3</div>
@@ -227,6 +189,8 @@ clicks: 3
     sys.exit(0)
     ```
 ```
+
+<br />
 
 ```py {1,3-4}
 import os, sys
@@ -256,7 +220,9 @@ sys.exit(0)
     ```
 ```
 
-- Example:
+<br />
+
+### Example:
 
 ```py {all} {maxHeight: '100px'}
 print(1)
@@ -281,7 +247,19 @@ print(9)
 <img src="/images/membership.png" class="w-[200px] m-auto mt-4" />
 ```
 
+<br />
+
+### Example:
+
 <img src="/images/membership.png" class="w-[200px] m-auto mt-4"  />
+
+---
+
+# Awesome Controls
+
+- hover with the mouse to the bottom left corner
+
+<img src="/images/controls.png" class="w-full mt-4" />
 
 ---
 
@@ -293,16 +271,20 @@ print(9)
 "build": "slidev build --base /REPO-NAME",
 ```
 
+<v-clicks>
+
 - run `npm run build`, this will create a `dist/` folder
-- run `mv dist ../docs`, this will move the slides to the `docs/` folder at the project root
+- run `mv dist ../docs`, this will move the build to the `docs/` folder at the project root
 - `git add .` - add all files to git
 - `git commit` - write your commit message
 - `git push` - push to GitHub
 - browse to `https://github.com/YOURNAME/YOUR-REPO/settings/pages`
 - select `master` branch and `/docs` folder and click `Save`
-- borwse to `https://YOURNAME.github.io/YOUR-REPO/`
+- browse to `https://YOURNAME.github.io/YOUR-REPO/`
+
+</v-clicks>
+
 
 ---
 layout: end
 ---
-
